@@ -15,23 +15,21 @@ public class ExplosionObjects : MonoBehaviour
     Rigidbody rb;
 
     public float explosionForce = 50f;
-    public float explosionRadius = 4f;
+    public float explosionRadius = 0.5f;
     public float explosionUpward = 0.4f;
     [SerializeField] private Material material;
-    public List<GameObject> newPieces = new List<GameObject>();
 
-    public Transform [] spwanPoints;
 
-    // Use this for initialization
     void Start()
     {
 
 
-        //calculate pivot distance
+
         cubesPivotDistance = cubeSize * cubesInRow / 2;
-        //use this value to create pivot vector)
+
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
         rb = GetComponent<Rigidbody>();
+
 
 
     }
@@ -48,10 +46,10 @@ public class ExplosionObjects : MonoBehaviour
     private void Explode()
     {
 
-        //make object disappear
+
         gameObject.SetActive(false);
 
-        //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
+
         for (int x = 0; x < cubesInRow; x++)
         {
             for (int y = 0; y < cubesInRow; y++)
@@ -64,45 +62,35 @@ public class ExplosionObjects : MonoBehaviour
             }
         }
     }
-    void CreateObjecstInf()
-    {
-
-        foreach (GameObject piece in newPieces)
-        {
-            GameObject newPiece = Instantiate(piece);
-            newPiece.AddComponent<Rigidbody>();
-            newPiece.GetComponent<Rigidbody>().mass = cubeSize;
-            newPiece.GetComponent<Renderer>().material = material;
-
-            // Add a random explosion force to each piece
-            Vector3 explosionDirection = Random.insideUnitSphere.normalized;
-            float explosionMagnitude = Random.Range(explosionForce / 2, explosionForce);
-            newPiece.GetComponent<Rigidbody>().AddForce(explosionDirection * explosionMagnitude, ForceMode.Impulse);
-
-        }
 
 
-    }
 
     private void CreatePiece(int x, int y, int z)
     {
 
-        //create piece
+
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
-        //set piece position and scale
+
         piece.transform.position = transform.position + new Vector3(cubeSize * x, cubeSize * y, cubeSize * z) - cubesPivot;
         piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
 
-        //add rigidbody and set mass
+
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
         piece.GetComponent<Renderer>().material = material;
-        newPieces.Add(piece);
-        CreateObjecstInf();
-
-
+        piece.tag = "ExplosionsObjecst";
+        Vector3 explosionPos = piece.transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
+        foreach (Collider hit in colliders)
+        {
+            if (hit != null && hit.transform.gameObject.CompareTag("ExplosionsObjecst"))
+            {
+               piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
+            }
+        }
+        GameManager.instance.newPieces.Add(piece);
 
 
     }
