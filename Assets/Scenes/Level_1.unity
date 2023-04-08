@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: yatakodasi
       objectReference: {fileID: 0}
+    - target: {fileID: 4930582958270543990, guid: 63bbf9a9cd20a1549bbcb7385ea6a433, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5703566757843641036, guid: 63bbf9a9cd20a1549bbcb7385ea6a433, type: 3}
       propertyPath: m_RootOrder
       value: 2
