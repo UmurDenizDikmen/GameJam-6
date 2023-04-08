@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private float range;
     public float range2;
 
+    public static bool isHit = false;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -19,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         {
             range = Time.time + range2;
             anim.Play("hit");
+            isHit = true;
         }
         if (transform.root.GetComponent<FirstPersonController>().m_Input.magnitude > 0)
         {

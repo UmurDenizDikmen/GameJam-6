@@ -22,34 +22,22 @@ public class ExplosionObjects : MonoBehaviour
 
     void Start()
     {
-
-
-
         cubesPivotDistance = cubeSize * cubesInRow / 2;
-
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
         rb = GetComponent<Rigidbody>();
-
-
-
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Bat"))
+        if (other.gameObject.CompareTag("Bat")&& PlayerMovement.isHit == true)
         {
             Explode();
 
         }
-
     }
 
     private void Explode()
     {
-
-
         gameObject.SetActive(false);
-
-
         for (int x = 0; x < cubesInRow; x++)
         {
             for (int y = 0; y < cubesInRow; y++)
@@ -62,9 +50,6 @@ public class ExplosionObjects : MonoBehaviour
             }
         }
     }
-
-
-
     private void CreatePiece(int x, int y, int z)
     {
 
