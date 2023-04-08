@@ -7,8 +7,9 @@ using UnityEngine;
 public class ExplosionObjects : MonoBehaviour
 {
 
-    public float cubeSize = 0.2f;
-    public int cubesInRow = 5;
+    public float cubeSize =  1f;
+    public int cubesInRow = 2;
+
 
     float cubesPivotDistance;
     Vector3 cubesPivot;
