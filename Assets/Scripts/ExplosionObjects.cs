@@ -32,9 +32,9 @@ public class ExplosionObjects : MonoBehaviour
         {
             Explode();
 
+
         }
     }
-
     private void Explode()
     {
         gameObject.SetActive(false);
@@ -52,16 +52,10 @@ public class ExplosionObjects : MonoBehaviour
     }
     private void CreatePiece(int x, int y, int z)
     {
-
-
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
-
-
         piece.transform.position = transform.position + new Vector3(cubeSize * x, cubeSize * y, cubeSize * z) - cubesPivot;
         piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
-
-
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
         piece.GetComponent<Renderer>().material = material;
@@ -76,8 +70,5 @@ public class ExplosionObjects : MonoBehaviour
             }
         }
         GameManager.instance.newPieces.Add(piece);
-
-
     }
-
 }
