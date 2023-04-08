@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class ExplosionObjects : MonoBehaviour
@@ -18,6 +19,7 @@ public class ExplosionObjects : MonoBehaviour
     public float explosionUpward = 0.4f;
     [SerializeField] private Material material;
 
+
     // Use this for initialization
     void Start()
     {
@@ -29,23 +31,21 @@ public class ExplosionObjects : MonoBehaviour
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
         rb = GetComponent<Rigidbody>();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Bat"))
         {
-            explode();
+            Explode();
+
         }
+
     }
 
-    public void explode()
+    private void Explode()
     {
+
         //make object disappear
         gameObject.SetActive(false);
 
@@ -56,29 +56,13 @@ public class ExplosionObjects : MonoBehaviour
             {
                 for (int z = 0; z < cubesInRow; z++)
                 {
-                    createPiece(x, y, z);
+                    CreatePiece(x, y, z);
+
                 }
             }
         }
-
-        Vector3 explosionPos = transform.position;
-        //get colliders in that position and radius
-        Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
-        //add explosion force to all colliders in that overlap sphere
-        foreach (Collider hit in colliders)
-        {
-            //get rigidbody from collider object
-
-
-                //add explosion force to this body with given parameters
-                rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
-
-        }
-
-
     }
-
-    private void createPiece(int x, int y, int z)
+    private void CreatePiece(int x, int y, int z)
     {
 
         //create piece
@@ -93,8 +77,16 @@ public class ExplosionObjects : MonoBehaviour
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
         piece.GetComponent<Renderer>().material = material;
-
-
+        piece.tag = "ExplosionsObjecst";
+        Vector3 explosionPos = piece.transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
+        foreach (Collider hit in colliders)
+        {
+            if (hit != null && hit.transform.gameObject.CompareTag("ExplosionsObjecst"))
+            {
+                Instantiate(hit.gameObject, hit.transform.position, Quaternion.identity);
+            }
+        }
     }
 
 }
