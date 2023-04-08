@@ -6,7 +6,19 @@ using UnityEngine;
 
 public class ExplosionObjects : MonoBehaviour
 {
+    public enum typeOfObjecst
+    {
+        pc,
+        tv,
+        lamb,
+        sifon,
 
+        glass,
+
+        flowers,
+
+    }
+    [SerializeField] private typeOfObjecst type_;
     public float cubeSize = 1f;
     public float cubesInRow = 5;
 
@@ -19,6 +31,8 @@ public class ExplosionObjects : MonoBehaviour
     public float explosionUpward = 0.4f;
     [SerializeField] private Material material;
 
+    public static bool isKey = false;
+
 
     void Start()
     {
@@ -28,11 +42,9 @@ public class ExplosionObjects : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Bat")&& PlayerMovement.isHit == true)
+        if (other.gameObject.CompareTag("Bat") && PlayerMovement.isHit == true)
         {
             Explode();
-
-
         }
     }
     private void Explode()
@@ -66,9 +78,31 @@ public class ExplosionObjects : MonoBehaviour
         {
             if (hit != null && hit.transform.gameObject.CompareTag("ExplosionsObjecst"))
             {
-               piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
+                piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
             }
         }
-        GameManager.instance.newPieces.Add(piece);
+        if (type_ == typeOfObjecst.tv)
+        {
+            GameManager.instance.newPieces1.Add(piece);
+        }
+        if (type_ == typeOfObjecst.flowers)
+        {
+            GameManager.instance.newPieces2.Add(piece);
+        }
+        if (type_ == typeOfObjecst.glass)
+        {
+            GameManager.instance.newPieces3.Add(piece);
+        }
+        if (type_ == typeOfObjecst.lamb)
+        {
+            GameManager.instance.newPieces4.Add(piece);
+        }
+        if (type_ == typeOfObjecst.pc)
+        {
+            GameManager.instance.newPieces5.Add(piece);
+            isKey = true;
+        }
+
+
     }
 }
