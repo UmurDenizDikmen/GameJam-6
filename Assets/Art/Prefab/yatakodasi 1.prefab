@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 5604360354281057206}
   - component: {fileID: 4263743093325613847}
   - component: {fileID: 6084931022131435356}
+  - component: {fileID: 3557693654283900630}
   m_Layer: 0
   m_Name: yatakodasi_duvar
   m_TagString: Untagged
@@ -569,6 +570,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3557693654283900630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233600926679108157}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.565136, y: 3.8939714, z: 10.106397}
+  m_Center: {x: 6.1895895, y: 1.9485183, z: 4.6885037}
 --- !u!1 &2528416240750422377
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +775,7 @@ GameObject:
   - component: {fileID: 5403444907791918738}
   - component: {fileID: 3346657303040442494}
   - component: {fileID: 7825789935740288396}
+  - component: {fileID: 3828652618439623139}
   m_Layer: 0
   m_Name: yatak
   m_TagString: Untagged
@@ -838,6 +853,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3828652618439623139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860603341707299864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6383214, y: 1.492407, z: 2.2959273}
+  m_Center: {x: 0.14973617, y: -0.017886221, z: -0.0063542128}
 --- !u!1 &3046525894232842877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,6 +2762,7 @@ GameObject:
   - component: {fileID: 2134387839799164202}
   - component: {fileID: 8160217215416142139}
   - component: {fileID: 6401437386672126127}
+  - component: {fileID: 5902013847687086073}
   m_Layer: 0
   m_Name: yatakodasi_duvar.004
   m_TagString: Untagged
@@ -2807,6 +2836,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5902013847687086073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7943760334645003373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.129663, y: 3.8939712, z: 0.43390274}
+  m_Center: {x: 1.9382124, y: 1.9485184, z: 9.524752}
 --- !u!1 &8229309499643502233
 GameObject:
   m_ObjectHideFlags: 0
