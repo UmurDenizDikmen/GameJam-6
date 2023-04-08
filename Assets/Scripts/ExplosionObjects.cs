@@ -7,9 +7,8 @@ using UnityEngine;
 public class ExplosionObjects : MonoBehaviour
 {
 
-    public float cubeSize =  1f;
-    public int cubesInRow = 2;
-
+    public float cubeSize = 1f;
+    public float cubesInRow = 5;
 
     float cubesPivotDistance;
     Vector3 cubesPivot;
@@ -19,7 +18,9 @@ public class ExplosionObjects : MonoBehaviour
     public float explosionRadius = 4f;
     public float explosionUpward = 0.4f;
     [SerializeField] private Material material;
+    public List<GameObject> newPieces = new List<GameObject>();
 
+    public Transform [] spwanPoints;
 
     // Use this for initialization
     void Start()
@@ -63,6 +64,26 @@ public class ExplosionObjects : MonoBehaviour
             }
         }
     }
+    void CreateObjecstInf()
+    {
+
+        foreach (GameObject piece in newPieces)
+        {
+            GameObject newPiece = Instantiate(piece);
+            newPiece.AddComponent<Rigidbody>();
+            newPiece.GetComponent<Rigidbody>().mass = cubeSize;
+            newPiece.GetComponent<Renderer>().material = material;
+
+            // Add a random explosion force to each piece
+            Vector3 explosionDirection = Random.insideUnitSphere.normalized;
+            float explosionMagnitude = Random.Range(explosionForce / 2, explosionForce);
+            newPiece.GetComponent<Rigidbody>().AddForce(explosionDirection * explosionMagnitude, ForceMode.Impulse);
+
+        }
+
+
+    }
+
     private void CreatePiece(int x, int y, int z)
     {
 
@@ -78,16 +99,12 @@ public class ExplosionObjects : MonoBehaviour
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
         piece.GetComponent<Renderer>().material = material;
-        piece.tag = "ExplosionsObjecst";
-        Vector3 explosionPos = piece.transform.position;
-        Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
-        foreach (Collider hit in colliders)
-        {
-            if (hit != null && hit.transform.gameObject.CompareTag("ExplosionsObjecst"))
-            {
-                Instantiate(hit.gameObject, hit.transform.position, Quaternion.identity);
-            }
-        }
+        newPieces.Add(piece);
+        CreateObjecstInf();
+
+
+
+
     }
 
 }
