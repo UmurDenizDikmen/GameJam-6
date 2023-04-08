@@ -12,11 +12,16 @@ public class ExplosionObjects : MonoBehaviour
         tv,
         lamb,
         sifon,
-
         glass,
-
         flowers,
-
+        tv2,
+        gitar1,
+        gitar2,
+        gitar3,
+        amfi,
+        lambader,
+        sandik,
+        vazo2,
     }
     [SerializeField] private typeOfObjecst type_;
     public float cubeSize = 1f;
@@ -101,6 +106,37 @@ public class ExplosionObjects : MonoBehaviour
         {
             GameManager.instance.newPieces5.Add(piece);
             isKey = true;
+        }
+        if (type_ == typeOfObjecst.amfi)
+        {
+            GameManager.instance.newPieces6.Add(piece);
+        }
+        if (type_ == typeOfObjecst.gitar1)
+        {
+            GameManager.instance.newPieces7.Add(piece);
+        }
+        if (type_ == typeOfObjecst.gitar2)
+        {
+            GameManager.instance.newPieces8.Add(piece);
+        }
+        if (type_ == typeOfObjecst.gitar3)
+        {
+            GameManager.instance.newPieces9.Add(piece);
+        }
+        if (type_ == typeOfObjecst.lambader)
+        {
+            GameManager.instance.newPieces10.Add(piece);
+
+        }
+         if (type_ == typeOfObjecst.tv2)
+        {
+            GameManager.instance.newPieces11.Add(piece);
+
+        }
+        if (type_ == typeOfObjecst.sandik)
+        {
+            GameManager.instance.newPieces12.Add(piece);
+
         }
 
 

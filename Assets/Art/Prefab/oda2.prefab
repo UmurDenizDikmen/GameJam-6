@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7265492241884532290}
   - component: {fileID: 3306037314619865373}
   - component: {fileID: 7907438503721009311}
+  - component: {fileID: 565888853293523199}
   m_Layer: 0
   m_Name: mutfak_duvar.006
   m_TagString: Untagged
@@ -84,6 +85,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &565888853293523199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338253508917211881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.958118, y: 3.8939712, z: 0.19970159}
+  m_Center: {x: -1.9790587, y: 1.9469856, z: 0.0019484535}
 --- !u!1 &499427242694716675
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +198,7 @@ GameObject:
   - component: {fileID: 4408663196113188304}
   - component: {fileID: 2824328513921442850}
   - component: {fileID: 4921785516476951803}
+  - component: {fileID: 1283990207292274510}
   m_Layer: 0
   m_Name: mutfak_duvar.005
   m_TagString: Untagged
@@ -257,6 +272,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1283990207292274510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522580404561668108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19970144, y: 3.8939717, z: 9.906119}
+  m_Center: {x: -0.09985087, y: 1.9469858, z: 4.9530597}
 --- !u!1 &773808513490280197
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +296,7 @@ GameObject:
   - component: {fileID: 3659846349425250799}
   - component: {fileID: 5419857084573149041}
   - component: {fileID: 4481431988909226926}
+  - component: {fileID: 655158605546707751}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -341,6 +370,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &655158605546707751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773808513490280197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0580066, y: 0.7962269, z: 1.8446945}
+  m_Center: {x: 0, y: 0.39811346, z: -2.0174948e-16}
 --- !u!1 &900322019319152131
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +540,7 @@ GameObject:
   - component: {fileID: 8890660880749321902}
   - component: {fileID: 5421579978829384750}
   - component: {fileID: 4662603648540357569}
+  - component: {fileID: 9033724736235144844}
   m_Layer: 0
   m_Name: koltuk
   m_TagString: Untagged
@@ -573,6 +616,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9033724736235144844
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427828943109796088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7825906, y: 1.5189415, z: 1.3307939}
+  m_Center: {x: 0.0000004172325, y: 0.75947064, z: -0.002392888}
 --- !u!1 &1800841188987389123
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +725,9 @@ GameObject:
   - component: {fileID: 8044075929969776257}
   - component: {fileID: 8396403210344237642}
   - component: {fileID: 8495048835224060959}
+  - component: {fileID: 3455062518334756319}
+  - component: {fileID: 814272084077359474}
+  - component: {fileID: 4965990051771103741}
   m_Layer: 0
   m_Name: Cube.003
   m_TagString: Untagged
@@ -743,6 +802,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3455062518334756319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153575592277655824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df544ccf5a3bc04b9d7362a316fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type_: 12
+  cubeSize: 0.5
+  cubesInRow: 4
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
+  material: {fileID: 2100000, guid: 1ba3a726caa7fb04eba8bfced0253ebf, type: 2}
+--- !u!65 &814272084077359474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153575592277655824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5815942, y: 0.7723728, z: 0.94444895}
+  m_Center: {x: 0.000000059604645, y: 0.3861864, z: -0.00000059604645}
+--- !u!54 &4965990051771103741
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153575592277655824}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2293707816503298104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1113,7 @@ GameObject:
   - component: {fileID: 8773817195903755714}
   - component: {fileID: 4467935756267922753}
   - component: {fileID: 4613288117867723404}
+  - component: {fileID: 8020940845588389419}
   m_Layer: 0
   m_Name: mutfak_duvar.004
   m_TagString: Untagged
@@ -1079,6 +1187,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8020940845588389419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2487598986930518047}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.101682, y: 5.404476, z: 0.19970225}
+  m_Center: {x: -5.050841, y: 2.702238, z: -0.09985048}
 --- !u!1 &2676984167737869713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,6 +1462,9 @@ GameObject:
   - component: {fileID: 2676984167737842107}
   - component: {fileID: 2676984167739136411}
   - component: {fileID: 2676984167740136283}
+  - component: {fileID: 4432482423152431720}
+  - component: {fileID: 6628876318840125410}
+  - component: {fileID: 6628876318840125409}
   m_Layer: 0
   m_Name: BassGuitar
   m_TagString: Untagged
@@ -1418,6 +1542,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4432482423152431720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2676984167737869723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df544ccf5a3bc04b9d7362a316fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type_: 9
+  cubeSize: 0.5
+  cubesInRow: 4
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
+  material: {fileID: 2100000, guid: 9acb106d8b111ff41a6072f2ba7306ff, type: 2}
+--- !u!65 &6628876318840125410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2676984167737869723}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3328331, y: 0.050000038, z: 0.9708252}
+  m_Center: {x: 0.00021927463, y: 0.027545815, z: -0.47045088}
+--- !u!54 &6628876318840125409
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2676984167737869723}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2676984167737869725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,7 +1889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5231206961403025775
 Transform:
   m_ObjectHideFlags: 0
@@ -1883,6 +2055,7 @@ GameObject:
   - component: {fileID: 3687156122305289078}
   - component: {fileID: 396848775589339188}
   - component: {fileID: 3401314663170307889}
+  - component: {fileID: 1727829468662017467}
   m_Layer: 0
   m_Name: mutfak_zemin.001
   m_TagString: Untagged
@@ -1955,6 +2128,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1727829468662017467
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506813347517597085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3866382880568842036, guid: ef17e259e5d741e498570906699ac84b, type: 3}
 --- !u!1 &3608080967667805236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,6 +2485,9 @@ GameObject:
   - component: {fileID: 3922753017278165755}
   - component: {fileID: 3922753017274741467}
   - component: {fileID: 3922753017275871259}
+  - component: {fileID: 7720446949813804059}
+  - component: {fileID: 6628876318840125412}
+  - component: {fileID: 6628876318840125411}
   m_Layer: 0
   m_Name: ElectricGuitar
   m_TagString: Untagged
@@ -2375,6 +2565,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7720446949813804059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922753017278066395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df544ccf5a3bc04b9d7362a316fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type_: 7
+  cubeSize: 0.5
+  cubesInRow: 4
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
+  material: {fileID: 2100000, guid: ed7dd07f029bcf2439caf0cf825836b4, type: 2}
+--- !u!65 &6628876318840125412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922753017278066395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3328331, y: 0.050000023, z: 0.9870536}
+  m_Center: {x: 0.00021980083, y: 0.027546288, z: -0.47856387}
+--- !u!54 &6628876318840125411
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922753017278066395}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3922753017278066397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,6 +3042,7 @@ GameObject:
   - component: {fileID: 6218765059310397574}
   - component: {fileID: 6127863089668740052}
   - component: {fileID: 4700862084602795577}
+  - component: {fileID: 7932786309445973909}
   m_Layer: 0
   m_Name: mutfak_duvar.007
   m_TagString: Untagged
@@ -2877,6 +3116,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7932786309445973909
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756146842047703614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.240814, y: 3.8939712, z: 0.1997016}
+  m_Center: {x: -7.781949, y: 1.9469856, z: 0.0019480325}
 --- !u!1 &5047873171489083863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3645,6 +3897,9 @@ GameObject:
   - component: {fileID: 8115196108953775318}
   - component: {fileID: 8437939811541754441}
   - component: {fileID: 7584679958640433381}
+  - component: {fileID: 4357999346410250733}
+  - component: {fileID: 2812944574199016282}
+  - component: {fileID: 961490430379018790}
   m_Layer: 0
   m_Name: lamba
   m_TagString: Untagged
@@ -3720,6 +3975,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4357999346410250733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563630251196406216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df544ccf5a3bc04b9d7362a316fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type_: 11
+  cubeSize: 0.5
+  cubesInRow: 4
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
+  material: {fileID: 2100000, guid: fa3f9c5f51fdab04c8b6cae8dec2e5b9, type: 2}
+--- !u!65 &2812944574199016282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563630251196406216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.783743, y: 3.0233324, z: 0.783743}
+  m_Center: {x: 0, y: 1.5116614, z: -0.00000010430813}
+--- !u!54 &961490430379018790
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563630251196406216}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5777161574076677558
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,6 +4118,8 @@ GameObject:
   - component: {fileID: 4900963766116441103}
   - component: {fileID: 3422922257059477109}
   - component: {fileID: 1639495325647133533}
+  - component: {fileID: 4911429103947591432}
+  - component: {fileID: 200494479}
   m_Layer: 0
   m_Name: vazo
   m_TagString: Untagged
@@ -3889,6 +4194,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4911429103947591432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924855430154718504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df544ccf5a3bc04b9d7362a316fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type_: 13
+  cubeSize: 0.5
+  cubesInRow: 4
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
+  material: {fileID: 2100000, guid: 268de9ebce6e5a745965272629724548, type: 2}
+--- !u!54 &200494479
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924855430154718504}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6712393238123734434
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,6 +4743,9 @@ GameObject:
   - component: {fileID: 7255951959449143036}
   - component: {fileID: 7255951959452042972}
   - component: {fileID: 7255951959451042844}
+  - component: {fileID: 6995839994887313198}
+  - component: {fileID: 879401026}
+  - component: {fileID: 879401025}
   m_Layer: 0
   m_Name: AcousticGuitar
   m_TagString: Untagged
@@ -4479,6 +4822,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6995839994887313198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255951959449115356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df544ccf5a3bc04b9d7362a316fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type_: 8
+  cubeSize: 0.5
+  cubesInRow: 4
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
+  material: {fileID: 2100000, guid: 9acb106d8b111ff41a6072f2ba7306ff, type: 2}
+--- !u!65 &879401026
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255951959449115356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36624664, y: 0.100420006, z: 0.9579723}
+  m_Center: {x: -0.000028349334, y: 0.052364748, z: -0.47898892}
+--- !u!54 &879401025
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255951959449115356}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7255951959449115358
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,6 +4964,7 @@ GameObject:
   - component: {fileID: 7597112627308754235}
   - component: {fileID: 8139835632875315037}
   - component: {fileID: 2911457359042488021}
+  - component: {fileID: 7585227953299857376}
   m_Layer: 0
   m_Name: koltuk.002
   m_TagString: Untagged
@@ -4647,6 +5039,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7585227953299857376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291514131248006562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7825909, y: 1.5856005, z: 1.3307943}
+  m_Center: {x: -0.00000023841858, y: 0.7928001, z: 0.0023926795}
 --- !u!1 &7315707055936962969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,6 +5314,9 @@ GameObject:
   - component: {fileID: 7315707055937330623}
   - component: {fileID: 7315707055933939103}
   - component: {fileID: 7315707055935037279}
+  - component: {fileID: 5664285713217386690}
+  - component: {fileID: 1002715076}
+  - component: {fileID: 1002715075}
   m_Layer: 0
   m_Name: PortableAmp
   m_TagString: Untagged
@@ -4985,6 +5393,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5664285713217386690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315707055936962975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df544ccf5a3bc04b9d7362a316fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type_: 10
+  cubeSize: 0.5
+  cubesInRow: 4
+  explosionForce: 50
+  explosionRadius: 0.5
+  explosionUpward: 0.4
+  material: {fileID: 2100000, guid: 6f21af531452f1b4484dc2f0b8d22d56, type: 2}
+--- !u!65 &1002715076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315707055936962975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8248228, y: 0.66452736, z: 0.29278287}
+  m_Center: {x: -0.012905757, y: 0.3322636, z: 0.036391377}
+--- !u!54 &1002715075
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315707055936962975}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7549843298713159133
 GameObject:
   m_ObjectHideFlags: 0
@@ -5038,6 +5494,7 @@ GameObject:
   - component: {fileID: 1515385746170976837}
   - component: {fileID: 5612175514243526054}
   - component: {fileID: 7930453488213923033}
+  - component: {fileID: 1996112818754088120}
   m_Layer: 0
   m_Name: koltuk.001
   m_TagString: Untagged
@@ -5114,6 +5571,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1996112818754088120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7565089944159324492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3307934, y: 1.6044219, z: 3.173357}
+  m_Center: {x: 0.0023928285, y: 0.8022109, z: 0.0000019669533}
 --- !u!1 &7565267947989598622
 GameObject:
   m_ObjectHideFlags: 0
@@ -5125,6 +5595,7 @@ GameObject:
   - component: {fileID: 4248363527997308944}
   - component: {fileID: 8478244803917102115}
   - component: {fileID: 7483888115754886354}
+  - component: {fileID: 5607324784112986567}
   m_Layer: 0
   m_Name: Cube.005
   m_TagString: Untagged
@@ -5198,6 +5669,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5607324784112986567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7565267947989598622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.82809645, y: 1.0248121, z: 2.707925}
+  m_Center: {x: 0.18156937, y: 0.51240605, z: 0}
 --- !u!1 &7618080911556100922
 GameObject:
   m_ObjectHideFlags: 0
@@ -5629,6 +6113,9 @@ GameObject:
   - component: {fileID: 7187764300384247456}
   - component: {fileID: 8809383105640092259}
   - component: {fileID: 6678097068389214894}
+  - component: {fileID: 9150360700331833928}
+  - component: {fileID: 4096840624760786784}
+  - component: {fileID: 6383224163487554570}
   m_Layer: 0
   m_Name: Cube.006
   m_TagString: Untagged
@@ -5644,7 +6131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8698208481656458757}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.586344, y: 1.1813245, z: 3.7243805}
+  m_LocalPosition: {x: -5.821, y: 1.1813245, z: 3.7243805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5702,6 +6189,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9150360700331833928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698208481656458757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df544ccf5a3bc04b9d7362a316fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type_: 3
+  cubeSize: 0.5
+  cubesInRow: 4
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
+  material: {fileID: 2100000, guid: 622f2886043112d4db794d7819e3ba85, type: 2}
+--- !u!65 &4096840624760786784
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698208481656458757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12050227, y: 1.3710902, z: 2.1409068}
+  m_Center: {x: 0, y: 0.6855451, z: -0.000000059604645}
+--- !u!54 &6383224163487554570
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698208481656458757}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8784005767433268593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5713,6 +6248,7 @@ GameObject:
   - component: {fileID: 4150911048663741644}
   - component: {fileID: 3202468697767499489}
   - component: {fileID: 7676697739204153200}
+  - component: {fileID: 6628876318840125413}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -5788,6 +6324,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6628876318840125413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784005767433268593}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2903892, y: 2.8228128, z: 0.9827064}
+  m_Center: {x: 0, y: 1.4114064, z: 0.0059550554}
 --- !u!1 &8947410823525912306
 GameObject:
   m_ObjectHideFlags: 0
@@ -5799,6 +6348,7 @@ GameObject:
   - component: {fileID: 6026125654647322252}
   - component: {fileID: 1627205446575810440}
   - component: {fileID: 8160539472951718618}
+  - component: {fileID: 1601233976}
   m_Layer: 0
   m_Name: Cube.007
   m_TagString: Untagged
@@ -5871,6 +6421,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1601233976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947410823525912306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6080341, y: 0.7223701, z: 0.6080341}
+  m_Center: {x: 0, y: 0.36118504, z: -0.000000029802322}
 --- !u!1 &8977766884460485794
 GameObject:
   m_ObjectHideFlags: 0
