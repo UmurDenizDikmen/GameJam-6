@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float range2;
 
     public static bool isHit = false;
+    [SerializeField] private AudioSource hitNot;
 
     void Start()
     {
@@ -31,5 +32,9 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("isWalk", false);
         }
+    }
+    public void PlayWoosh()
+    {
+        hitNot.Play();
     }
 }

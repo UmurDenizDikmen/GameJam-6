@@ -34,6 +34,8 @@ public class ExplosionObjects : MonoBehaviour
     public float cubeSize = 1f;
     public float cubesInRow = 5;
 
+
+
     float cubesPivotDistance;
     Vector3 cubesPivot;
     Rigidbody rb;
@@ -53,21 +55,26 @@ public class ExplosionObjects : MonoBehaviour
         cubesPivotDistance = cubeSize * cubesInRow / 2;
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
         rb = GetComponent<Rigidbody>();
+
     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Bat") && PlayerMovement.isHit == true)
         {
+
             Explode();
-            Invoke("inactiveHit",.2f);
+            Invoke("inactiveHit", .1f);
+
         }
     }
+
     public void inactiveHit()
     {
         PlayerMovement.isHit = false;
     }
     private void Explode()
     {
+
         gameObject.SetActive(false);
         for (int x = 0; x < cubesInRow; x++)
         {
@@ -84,6 +91,7 @@ public class ExplosionObjects : MonoBehaviour
     private void CreatePiece(int x, int y, int z)
     {
         GameObject piece;
+
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
         piece.transform.position = transform.position + new Vector3(cubeSize * x, cubeSize * y, cubeSize * z) - cubesPivot;
         piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
@@ -143,23 +151,23 @@ public class ExplosionObjects : MonoBehaviour
             case typeOfObjecst.vazo2:
                 GameManager.instance.newPieces13.Add(piece);
                 break;
-                 case typeOfObjecst.buzdolabi:
+            case typeOfObjecst.buzdolabi:
                 GameManager.instance.newPieces14.Add(piece);
-                  isKey3 = true;
+                isKey3 = true;
                 break;
-                 case typeOfObjecst.masadakisaksi:
+            case typeOfObjecst.masadakisaksi:
                 GameManager.instance.newPieces15.Add(piece);
                 break;
-                 case typeOfObjecst.yerdekisaki:
+            case typeOfObjecst.yerdekisaki:
                 GameManager.instance.newPieces16.Add(piece);
                 break;
-                 case typeOfObjecst.tostmakinesi:
+            case typeOfObjecst.tostmakinesi:
                 GameManager.instance.newPieces17.Add(piece);
                 break;
-                 case typeOfObjecst.çayndalik:
+            case typeOfObjecst.çayndalik:
                 GameManager.instance.newPieces18.Add(piece);
                 break;
-                 case typeOfObjecst.mutfakdolabi:
+            case typeOfObjecst.mutfakdolabi:
                 GameManager.instance.newPieces19.Add(piece);
                 break;
 

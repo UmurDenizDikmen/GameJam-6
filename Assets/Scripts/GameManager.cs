@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> newPieces18 = new List<GameObject>();
     public List<GameObject> newPieces19 = new List<GameObject>();
 
-
+    [SerializeField] private AudioSource keySound;
 
     [SerializeField] private GameObject key;
     [SerializeField] private GameObject key2;
@@ -140,6 +140,7 @@ public class GameManager : MonoBehaviour
     {
         if (ExplosionObjects.isKey == true)
         {
+            keySound.Play();
             key.gameObject.SetActive(true);
             doorRoom1.transform.DORotate(new Vector3(0, -90, 0), 1f).SetEase(Ease.Linear);
         }
@@ -148,6 +149,7 @@ public class GameManager : MonoBehaviour
     {
         if (ExplosionObjects.isKey2 == true)
         {
+            keySound.Play();
             key2.gameObject.SetActive(true);
             doorRoom2.transform.DORotate(new Vector3(0, -90, 0), 1f).SetEase(Ease.Linear);
         }
@@ -156,6 +158,7 @@ public class GameManager : MonoBehaviour
     {
         if (ExplosionObjects.isKey3 == true)
         {
+            keySound.Play();
             key3.gameObject.SetActive(true);
             doorRoom3.transform.DORotate(new Vector3(0, -90, 0), 1f).SetEase(Ease.Linear);
         }
