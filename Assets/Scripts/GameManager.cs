@@ -29,7 +29,11 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField] private GameObject key;
+    [SerializeField] private GameObject key2;
+    [SerializeField] private GameObject key3;
     [SerializeField] private GameObject doorRoom1;
+    [SerializeField] private GameObject doorRoom2;
+    [SerializeField] private GameObject doorRoom3;
 
     public static event Action<GameState> OnStateChanged;
     public static GameManager instance;
@@ -49,7 +53,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
 
-        timers = new float[19] { .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f,.5f,.5f,.5f,.5f,.5f };
+        timers = new float[19] { .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f };
     }
     void Start()
     {
@@ -97,14 +101,20 @@ public class GameManager : MonoBehaviour
                 ExplosionObjects.isKey = false;
                 return newPieces5;
             case 5: return newPieces6;
-            case 6: return newPieces7;
+            case 6:
+                SpawnKeyLevel2();
+                ExplosionObjects.isKey2 = false;
+                return newPieces7;
             case 7: return newPieces8;
             case 8: return newPieces9;
             case 9: return newPieces10;
             case 10: return newPieces11;
             case 11: return newPieces12;
             case 12: return newPieces13;
-            case 13: return newPieces14;
+            case 13:
+                SpawnKeyLevel3();
+                ExplosionObjects.isKey3 = false;
+                return newPieces14;
             case 14: return newPieces15;
             case 15: return newPieces16;
             case 16: return newPieces17;
@@ -119,6 +129,8 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Start:
                 key.gameObject.SetActive(false);
+                key2.gameObject.SetActive(false);
+                key3.gameObject.SetActive(false);
                 break;
         }
         OnStateChanged?.Invoke(newState);
@@ -132,4 +144,21 @@ public class GameManager : MonoBehaviour
             doorRoom1.transform.DORotate(new Vector3(0, -90, 0), 1f).SetEase(Ease.Linear);
         }
     }
+    public void SpawnKeyLevel2()
+    {
+        if (ExplosionObjects.isKey2 == true)
+        {
+            key2.gameObject.SetActive(true);
+            doorRoom2.transform.DORotate(new Vector3(0, -90, 0), 1f).SetEase(Ease.Linear);
+        }
+    }
+    public void SpawnKeyLevel3()
+    {
+        if (ExplosionObjects.isKey3 == true)
+        {
+            key3.gameObject.SetActive(true);
+            doorRoom3.transform.DORotate(new Vector3(0, -90, 0), 1f).SetEase(Ease.Linear);
+        }
+    }
+
 }

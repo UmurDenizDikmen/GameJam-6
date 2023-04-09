@@ -44,6 +44,8 @@ public class ExplosionObjects : MonoBehaviour
     [SerializeField] private Material material;
 
     public static bool isKey = false;
+    public static bool isKey2 = false;
+    public static bool isKey3 = false;
 
 
     void Start()
@@ -86,7 +88,7 @@ public class ExplosionObjects : MonoBehaviour
         piece.transform.position = transform.position + new Vector3(cubeSize * x, cubeSize * y, cubeSize * z) - cubesPivot;
         piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
         piece.AddComponent<Rigidbody>();
-        piece.GetComponent<Rigidbody>().mass = cubeSize;
+        piece.GetComponent<Rigidbody>().mass = .2f;
         piece.GetComponent<Renderer>().material = material;
         piece.tag = "ExplosionsObjecst";
         Vector3 explosionPos = piece.transform.position;
@@ -121,6 +123,7 @@ public class ExplosionObjects : MonoBehaviour
                 break;
             case typeOfObjecst.gitar1:
                 GameManager.instance.newPieces7.Add(piece);
+                isKey2 = true;
                 break;
             case typeOfObjecst.gitar2:
                 GameManager.instance.newPieces8.Add(piece);
@@ -142,6 +145,7 @@ public class ExplosionObjects : MonoBehaviour
                 break;
                  case typeOfObjecst.buzdolabi:
                 GameManager.instance.newPieces14.Add(piece);
+                  isKey3 = true;
                 break;
                  case typeOfObjecst.masadakisaksi:
                 GameManager.instance.newPieces15.Add(piece);
