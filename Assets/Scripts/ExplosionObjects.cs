@@ -57,7 +57,12 @@ public class ExplosionObjects : MonoBehaviour
         if (other.gameObject.CompareTag("Bat") && PlayerMovement.isHit == true)
         {
             Explode();
+            Invoke("inactiveHit",.2f);
         }
+    }
+    public void inactiveHit()
+    {
+        PlayerMovement.isHit = false;
     }
     private void Explode()
     {
