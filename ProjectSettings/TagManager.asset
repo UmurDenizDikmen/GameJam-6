@@ -8,6 +8,9 @@ TagManager:
   - Floor
   - Bat
   - ExplosionsObjecst
+  - Level1End
+  - Level2End
+  - Level3End
   layers:
   - Default
   - TransparentFX

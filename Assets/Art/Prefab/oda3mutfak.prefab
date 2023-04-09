@@ -1886,6 +1886,7 @@ GameObject:
   - component: {fileID: 2537520730994139509}
   - component: {fileID: 2253381941095632800}
   - component: {fileID: 5913855424102089957}
+  - component: {fileID: 1796472062}
   m_Layer: 0
   m_Name: mutfak_duvar.010
   m_TagString: Untagged
@@ -1959,6 +1960,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1796472062
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861838119907889642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.263746, y: 3.8939712, z: 0.20792502}
+  m_Center: {x: -4.131873, y: 1.9469856, z: -0.0041131936}
 --- !u!1 &5891641574468590542
 GameObject:
   m_ObjectHideFlags: 0

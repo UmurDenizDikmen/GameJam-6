@@ -110,65 +110,85 @@ public class ExplosionObjects : MonoBehaviour
         }
         switch (type_)
         {
+
             case typeOfObjecst.tv:
                 GameManager.instance.newPieces1.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount");
                 break;
             case typeOfObjecst.flowers:
                 GameManager.instance.newPieces2.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount");
                 break;
             case typeOfObjecst.glass:
                 GameManager.instance.newPieces3.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount");
                 break;
             case typeOfObjecst.lamb:
                 GameManager.instance.newPieces4.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount");
                 break;
             case typeOfObjecst.pc:
                 GameManager.instance.newPieces5.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount");
                 isKey = true;
                 break;
             case typeOfObjecst.amfi:
                 GameManager.instance.newPieces6.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount2");
                 break;
             case typeOfObjecst.gitar1:
                 GameManager.instance.newPieces7.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount2");
                 isKey2 = true;
                 break;
             case typeOfObjecst.gitar2:
                 GameManager.instance.newPieces8.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount2");
                 break;
             case typeOfObjecst.gitar3:
                 GameManager.instance.newPieces9.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount2");
                 break;
             case typeOfObjecst.lambader:
                 GameManager.instance.newPieces10.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount2");
                 break;
             case typeOfObjecst.tv2:
                 GameManager.instance.newPieces11.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount2");
                 break;
             case typeOfObjecst.sandik:
                 GameManager.instance.newPieces12.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount2");
                 break;
             case typeOfObjecst.vazo2:
                 GameManager.instance.newPieces13.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount2");
                 break;
             case typeOfObjecst.buzdolabi:
                 GameManager.instance.newPieces14.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount3");
                 isKey3 = true;
                 break;
             case typeOfObjecst.masadakisaksi:
                 GameManager.instance.newPieces15.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount3");
                 break;
             case typeOfObjecst.yerdekisaki:
                 GameManager.instance.newPieces16.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount3");
                 break;
             case typeOfObjecst.tostmakinesi:
                 GameManager.instance.newPieces17.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount3");
                 break;
             case typeOfObjecst.çayndalik:
                 GameManager.instance.newPieces18.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount3");
                 break;
             case typeOfObjecst.mutfakdolabi:
                 GameManager.instance.newPieces19.Add(piece);
+                GameManager.instance.StartCoroutine("IncreaseFillAmount3");
                 break;
 
             default:

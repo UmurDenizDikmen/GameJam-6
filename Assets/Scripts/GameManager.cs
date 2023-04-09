@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using DG.Tweening;
+using UnityEngine.UI;
+using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,6 +39,10 @@ public class GameManager : MonoBehaviour
 
     public static event Action<GameState> OnStateChanged;
     public static GameManager instance;
+
+    public Image Room1;
+    public Image Room2;
+    public Image Room3;
 
     public Transform[] spawnPoints;
     public float[] timers;
@@ -92,10 +98,14 @@ public class GameManager : MonoBehaviour
     {
         switch (index)
         {
-            case 0: return newPieces1;
-            case 1: return newPieces2;
-            case 2: return newPieces3;
-            case 3: return newPieces4;
+            case 0:
+                return newPieces1;
+            case 1:
+                return newPieces2;
+            case 2:
+                return newPieces3;
+            case 3:
+                return newPieces4;
             case 4:
                 SpawnKeyLevel1();
                 ExplosionObjects.isKey = false;
@@ -163,5 +173,43 @@ public class GameManager : MonoBehaviour
             doorRoom3.transform.DORotate(new Vector3(0, -90, 0), 1f).SetEase(Ease.Linear);
         }
     }
+    public IEnumerator IncreaseFillAmount()
+    {
+        while (true)
+        {
+            Room1.fillAmount += 0.00030f * Time.deltaTime;
+            yield return null;
+
+            if(Room1.fillAmount == 0)
+            {
+               ChangeGameState(GameState.Fail);
+            }
+        }
+    }
+    public IEnumerator IncreaseFillAmount2()
+    {
+        while (true)
+        {
+            Room2.fillAmount += 0.00030f * Time.deltaTime;
+            yield return null;
+            if(Room2.fillAmount == 0)
+            {
+               ChangeGameState(GameState.Fail);
+            }
+        }
+    }
+    public IEnumerator IncreaseFillAmount3()
+    {
+        while (true)
+        {
+            Room3.fillAmount += 0.00030f * Time.deltaTime;
+            if(Room3.fillAmount == 0)
+            {
+               ChangeGameState(GameState.Fail);
+            }
+            yield return null;
+        }
+    }
+
 
 }
