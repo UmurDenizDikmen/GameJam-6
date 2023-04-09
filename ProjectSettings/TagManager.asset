@@ -11,6 +11,7 @@ TagManager:
   - Level1End
   - Level2End
   - Level3End
+  - GameEnd
   layers:
   - Default
   - TransparentFX

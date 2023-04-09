@@ -1109,6 +1109,7 @@ GameObject:
   - component: {fileID: 4003199676331394255}
   - component: {fileID: 7641236674084363514}
   - component: {fileID: 1146289018074701033}
+  - component: {fileID: 3815421643227009045}
   m_Layer: 0
   m_Name: collider_at
   m_TagString: Untagged
@@ -1181,6 +1182,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3815421643227009045
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159686343063723636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1478060083545664103, guid: bb9c6220ba1397941978ffe564a6f5b2, type: 3}
 --- !u!1 &2307355648705812374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2800,6 +2815,7 @@ GameObject:
   - component: {fileID: 8338409926092801194}
   - component: {fileID: 2407381477390668962}
   - component: {fileID: 8325618484446660790}
+  - component: {fileID: 5615160421248458659}
   m_Layer: 0
   m_Name: yatakodasi_zemin.001
   m_TagString: Untagged
@@ -2873,6 +2889,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5615160421248458659
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091568462409610886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9221882753962873456, guid: bb9c6220ba1397941978ffe564a6f5b2, type: 3}
 --- !u!1 &8566798746577201092
 GameObject:
   m_ObjectHideFlags: 0

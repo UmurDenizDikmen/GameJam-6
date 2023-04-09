@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
@@ -50,28 +51,32 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        ChangeGameState(GameState.Start);
 
-
-        timers = new float[19] { .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f };
     }
     void Start()
     {
         ChangeGameState(GameState.Start);
-    }
+        timers = new float[19] { .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f };
 
+    }
 
     private void Update()
     {
+
+
+        if (State == GameState.Start && Input.GetKey(KeyCode.E))
+        {
+            ChangeGameState(GameState.InGame);
+            return;
+
+        }
+
         for (int i = 0; i < 19; i++)
         {
-            if (GetListForIndex(i).Count > 0)
+            if (GetListForIndex(i).Count > 0 && State == GameState.InGame)
             {
                 timers[i] -= Time.deltaTime;
 
@@ -93,7 +98,16 @@ public class GameManager : MonoBehaviour
 
         GetListForIndex(index).RemoveAt(0);
     }
+     public void Rtray()
+    {
+       SceneManager.LoadScene(1);
 
+
+    }
+    public void End()
+    {
+         Application.Quit();
+    }
     private List<GameObject> GetListForIndex(int index)
     {
         switch (index)
@@ -141,6 +155,7 @@ public class GameManager : MonoBehaviour
                 key.gameObject.SetActive(false);
                 key2.gameObject.SetActive(false);
                 key3.gameObject.SetActive(false);
+                transform.gameObject.SetActive(true);
                 break;
         }
         OnStateChanged?.Invoke(newState);
@@ -180,9 +195,10 @@ public class GameManager : MonoBehaviour
             Room1.fillAmount += 0.00030f * Time.deltaTime;
             yield return null;
 
-            if(Room1.fillAmount == 0)
+            if (Room1.fillAmount == 1)
             {
-               ChangeGameState(GameState.Fail);
+                ChangeGameState(GameState.Fail);
+
             }
         }
     }
@@ -192,9 +208,9 @@ public class GameManager : MonoBehaviour
         {
             Room2.fillAmount += 0.00030f * Time.deltaTime;
             yield return null;
-            if(Room2.fillAmount == 0)
+            if (Room2.fillAmount == 1)
             {
-               ChangeGameState(GameState.Fail);
+                ChangeGameState(GameState.Fail);
             }
         }
     }
@@ -203,9 +219,9 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             Room3.fillAmount += 0.00030f * Time.deltaTime;
-            if(Room3.fillAmount == 0)
+            if (Room3.fillAmount == 1)
             {
-               ChangeGameState(GameState.Fail);
+                ChangeGameState(GameState.Fail);
             }
             yield return null;
         }

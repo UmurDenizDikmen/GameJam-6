@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     Animator anim;
@@ -16,16 +17,18 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time > range)
+
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time > range && GameManager.instance.State == GameState.InGame)
         {
             range = Time.time + range2;
             anim.Play("hit");
             isHit = true;
         }
-        if (transform.root.GetComponent<FirstPersonController>().m_Input.magnitude > 0)
+        if (transform.root.GetComponent<FirstPersonController>().m_Input.magnitude > 0 && GameManager.instance.State == GameState.InGame)
         {
             anim.SetBool("isWalk", true);
         }
@@ -38,27 +41,9 @@ public class PlayerMovement : MonoBehaviour
     {
         hitNot.Play();
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Level1End"))
-        {
-            UIController.instance.Panel1.SetActive(false);
-            UIController.instance.Panel2.SetActive(true);
-            GameManager.instance.StopCoroutine("IncreaseFillAmount");
 
-        }
-        if(other.gameObject.CompareTag("Level2End"))
-        {
-             UIController.instance.Panel2.SetActive(false);
-             UIController.instance.Panel3.SetActive(true);
-               GameManager.instance.StopCoroutine("IncreaseFillAmount2");
-        }
-         if(other.gameObject.CompareTag("Level3End"))
-        {
-             UIController.instance.Panel3.SetActive(false);
-              GameManager.instance.StopAllCoroutines();
 
-        }
-    }
+
+
 
 }
