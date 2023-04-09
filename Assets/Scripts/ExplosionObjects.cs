@@ -22,6 +22,13 @@ public class ExplosionObjects : MonoBehaviour
         lambader,
         sandik,
         vazo2,
+        buzdolabi,
+        masadakisaksi,
+        yerdekisaki,
+        tostmakinesi,
+        çayndalik,
+        mutfakdolabi,
+
     }
     [SerializeField] private typeOfObjecst type_;
     public float cubeSize = 1f;
@@ -86,57 +93,70 @@ public class ExplosionObjects : MonoBehaviour
                 piece.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
             }
         }
-        if (type_ == typeOfObjecst.tv)
+        switch (type_)
         {
-            GameManager.instance.newPieces1.Add(piece);
-        }
-        if (type_ == typeOfObjecst.flowers)
-        {
-            GameManager.instance.newPieces2.Add(piece);
-        }
-        if (type_ == typeOfObjecst.glass)
-        {
-            GameManager.instance.newPieces3.Add(piece);
-        }
-        if (type_ == typeOfObjecst.lamb)
-        {
-            GameManager.instance.newPieces4.Add(piece);
-        }
-        if (type_ == typeOfObjecst.pc)
-        {
-            GameManager.instance.newPieces5.Add(piece);
-            isKey = true;
-        }
-        if (type_ == typeOfObjecst.amfi)
-        {
-            GameManager.instance.newPieces6.Add(piece);
-        }
-        if (type_ == typeOfObjecst.gitar1)
-        {
-            GameManager.instance.newPieces7.Add(piece);
-        }
-        if (type_ == typeOfObjecst.gitar2)
-        {
-            GameManager.instance.newPieces8.Add(piece);
-        }
-        if (type_ == typeOfObjecst.gitar3)
-        {
-            GameManager.instance.newPieces9.Add(piece);
-        }
-        if (type_ == typeOfObjecst.lambader)
-        {
-            GameManager.instance.newPieces10.Add(piece);
+            case typeOfObjecst.tv:
+                GameManager.instance.newPieces1.Add(piece);
+                break;
+            case typeOfObjecst.flowers:
+                GameManager.instance.newPieces2.Add(piece);
+                break;
+            case typeOfObjecst.glass:
+                GameManager.instance.newPieces3.Add(piece);
+                break;
+            case typeOfObjecst.lamb:
+                GameManager.instance.newPieces4.Add(piece);
+                break;
+            case typeOfObjecst.pc:
+                GameManager.instance.newPieces5.Add(piece);
+                isKey = true;
+                break;
+            case typeOfObjecst.amfi:
+                GameManager.instance.newPieces6.Add(piece);
+                break;
+            case typeOfObjecst.gitar1:
+                GameManager.instance.newPieces7.Add(piece);
+                break;
+            case typeOfObjecst.gitar2:
+                GameManager.instance.newPieces8.Add(piece);
+                break;
+            case typeOfObjecst.gitar3:
+                GameManager.instance.newPieces9.Add(piece);
+                break;
+            case typeOfObjecst.lambader:
+                GameManager.instance.newPieces10.Add(piece);
+                break;
+            case typeOfObjecst.tv2:
+                GameManager.instance.newPieces11.Add(piece);
+                break;
+            case typeOfObjecst.sandik:
+                GameManager.instance.newPieces12.Add(piece);
+                break;
+            case typeOfObjecst.vazo2:
+                GameManager.instance.newPieces13.Add(piece);
+                break;
+                 case typeOfObjecst.buzdolabi:
+                GameManager.instance.newPieces14.Add(piece);
+                break;
+                 case typeOfObjecst.masadakisaksi:
+                GameManager.instance.newPieces15.Add(piece);
+                break;
+                 case typeOfObjecst.yerdekisaki:
+                GameManager.instance.newPieces16.Add(piece);
+                break;
+                 case typeOfObjecst.tostmakinesi:
+                GameManager.instance.newPieces17.Add(piece);
+                break;
+                 case typeOfObjecst.çayndalik:
+                GameManager.instance.newPieces18.Add(piece);
+                break;
+                 case typeOfObjecst.mutfakdolabi:
+                GameManager.instance.newPieces19.Add(piece);
+                break;
 
-        }
-         if (type_ == typeOfObjecst.tv2)
-        {
-            GameManager.instance.newPieces11.Add(piece);
+            default:
 
-        }
-        if (type_ == typeOfObjecst.sandik)
-        {
-            GameManager.instance.newPieces12.Add(piece);
-
+                break;
         }
 
 

@@ -19,6 +19,13 @@ public class GameManager : MonoBehaviour
     public List<GameObject> newPieces11 = new List<GameObject>();
     public List<GameObject> newPieces12 = new List<GameObject>();
     public List<GameObject> newPieces13 = new List<GameObject>();
+    public List<GameObject> newPieces14 = new List<GameObject>();
+    public List<GameObject> newPieces15 = new List<GameObject>();
+    public List<GameObject> newPieces16 = new List<GameObject>();
+    public List<GameObject> newPieces17 = new List<GameObject>();
+    public List<GameObject> newPieces18 = new List<GameObject>();
+    public List<GameObject> newPieces19 = new List<GameObject>();
+
 
 
     [SerializeField] private GameObject key;
@@ -42,7 +49,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
 
-        timers = new float[14] { .5f, .5f, .5f, .5f, .5f ,.5f, .5f, .5f, .5f, .5f,.5f,.5f,.5f,.5f};
+        timers = new float[19] { .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f, .5f,.5f,.5f,.5f,.5f,.5f };
     }
     void Start()
     {
@@ -52,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < 13; i++)
+        for (int i = 0; i < 19; i++)
         {
             if (GetListForIndex(i).Count > 0)
             {
@@ -97,6 +104,12 @@ public class GameManager : MonoBehaviour
             case 10: return newPieces11;
             case 11: return newPieces12;
             case 12: return newPieces13;
+            case 13: return newPieces14;
+            case 14: return newPieces15;
+            case 15: return newPieces16;
+            case 16: return newPieces17;
+            case 17: return newPieces18;
+            case 18: return newPieces19;
             default: return null;
         }
     }
