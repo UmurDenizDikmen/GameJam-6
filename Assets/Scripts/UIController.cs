@@ -11,27 +11,22 @@ public class UIController : MonoBehaviour
     public GameObject Panel2;
     public GameObject Panel3;
     public GameObject losePanel;
-
     public GameObject cluePanel1;
     public GameObject cluePanel2;
     public GameObject cluePanel3;
-
     public GameObject startGamePanel;
-
     public GameObject Win;
-
-
     public static UIController instance;
-    void Start()
+    private void Start()
     {
         GameManager.OnStateChanged += OnStateChanged;
         instance = this;
     }
-    void OnDisable()
+    private void OnDisable()
     {
         GameManager.OnStateChanged -= OnStateChanged;
     }
-    void OnStateChanged(GameState state)
+    private void OnStateChanged(GameState state)
     {
         switch (state)
         {

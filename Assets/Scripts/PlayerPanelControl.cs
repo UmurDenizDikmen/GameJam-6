@@ -6,7 +6,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerPanelControl : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
         GameManager.OnStateChanged += OnStateChanged;
         transform.gameObject.GetComponent<FirstPersonController>().m_WalkSpeed = 0f;

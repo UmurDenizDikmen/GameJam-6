@@ -33,9 +33,6 @@ public class ExplosionObjects : MonoBehaviour
     [SerializeField] private typeOfObjecst type_;
     public float cubeSize = 1f;
     public float cubesInRow = 5;
-
-
-
     float cubesPivotDistance;
     Vector3 cubesPivot;
     Rigidbody rb;

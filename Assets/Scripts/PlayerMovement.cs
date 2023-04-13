@@ -3,25 +3,19 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
-
-
 public class PlayerMovement : MonoBehaviour
 {
     Animator anim;
     private float range;
     public float range2;
-
     public static bool isHit = false;
     [SerializeField] private AudioSource hitNot;
-
-    void Start()
+    private void Start()
     {
         anim = GetComponent<Animator>();
-
     }
-    void Update()
+    private void Update()
     {
-
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > range && GameManager.instance.State == GameState.InGame)
         {
             range = Time.time + range2;
@@ -41,9 +35,4 @@ public class PlayerMovement : MonoBehaviour
     {
         hitNot.Play();
     }
-
-
-
-
-
 }
